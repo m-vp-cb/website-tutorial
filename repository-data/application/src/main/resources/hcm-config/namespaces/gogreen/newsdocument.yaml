@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['hipposysedit:remodel', 'mix:referenceable']
-          jcr:uuid: b2fca9c0-0c2b-436f-89fc-2beafbdce65b
+          jcr:uuid: b2c53b91-a34c-4126-997f-bf24858c0a3a
           hipposysedit:node: true
           hipposysedit:supertype: ['gogreen:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.gogreen.com/gogreen/nt/1.0
@@ -93,7 +93,7 @@ definitions:
         /hipposysedit:prototype:
           jcr:primaryType: gogreen:newsdocument
           jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: cfaf82f5-bad0-4135-a929-f0bb852afd96
+          jcr:uuid: 3afdd139-19d6-48ef-801b-4d9e508e1aa8
           gogreen:date: 0001-01-01T13:00:00+01:00
           gogreen:documenttype: news
           gogreen:introduction: ''
@@ -165,8 +165,15 @@ definitions:
             field: content
             plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
             wicket.id: ${cluster.id}.left.item
+            caption: ''
+            hint: ''
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
+              ckeditor.config.overlayed.json: '{  extraPlugins: ''cld,dialogui,iframedialog,about,dialog'',removePlugins:
+                ''youtube,sourcearea,codemirror'', allowedContent:''img[src,alt,width,height]''
+                }'
+              ckeditor.config.appended.json: '{  toolbarGroups: [    { name: ''about''
+                }  ]}'
           /date:
             jcr:primaryType: frontend:plugin
             field: date

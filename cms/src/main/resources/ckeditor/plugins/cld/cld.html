@@ -1,0 +1,40 @@
+<html>
+<head>
+  <script src="https://media-library.cloudinary.com/global/all.js"></script>
+
+
+</head>
+<body onload="callCloudinary()">
+<form><input type="textarea" id="image-info"></input></form>
+  <script>
+     function callCloudinary(){
+        window.ml = cloudinary.openMediaLibrary ({
+          cloud_name: '<>',
+          api_key: '<>',
+          username: '<>',
+          inline_container: '#select-img',
+          multiple: false
+        }, {
+          insertHandler: function (data) {
+            data.assets.forEach(asset => {
+              console.log("Inserted asset:", JSON.stringify(asset, null, 2));
+              var img = document.createElement("img");
+              if (asset.hasOwnProperty('derived')){
+                img.src = asset.derived[0].secure_url;
+              } else {
+                img.src = asset.secure_url;
+              }
+              img.id = "cld-img";
+              img.payload = JSON.stringify(asset, null, 2);
+              var src = document.getElementById("select-img");
+                src.appendChild(img);
+              var info = document.getElementById("image-info");
+                info.value = JSON.stringify(asset, null, 2)
+            })
+          }
+        });
+     }
+  </script>
+<div id="select-img"></div>
+</body>
+</html>
