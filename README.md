@@ -1,23 +1,7 @@
-# BloomReach Experience Manager Tutorial: Build a Website
-
-This tutorial will guide you through the development of GoGreen, brXM's demo
-website. The tutorial follows two development iterations. In each iteration,
-you will deliver a working site and increase your brXM knowledge level at the
-same time. At the end of the tutorial, you will have a good idea of the basic
-development tasks involved in the implementation of a brXM-based website.
-
-## Full tutorial:
-[https://documentation.bloomreach.com/trails/developer-trail/introduction.html](https://documentation.bloomreach.com/trails/developer-trail/introduction.html)
-
-The tutorial describes two project iterations:
-
-1. [Select Out-of-the-Box Features](https://documentation.bloomreach.com/trails/developer-trail/configure-out-of-the-box-features/select-out-of-the-box-features.html)
-2. [Develop New Features](https://documentation.bloomreach.com/trails/developer-trail/develop-new-features/two-columns-page-configuration.html)
-
-The result of each project iteration is available from the corresponding branch:
-
-1. [iteration-1](https://github.com/bloomreach/website-tutorial/tree/iteration-1)
-2. [iteration-2](https://github.com/bloomreach/website-tutorial/tree/iteration-2)
+# BloomReach Experience Manager: Build a Website - With Cloudinary Plugin in CKEditor
+This is based on the basic website demo of bloomreach.
+I build a simple plugin for the CKEditor (needs finetuning);
+You need to add your cloudinary credentials;
 
 ## Running locally
 
