@@ -53,3 +53,9 @@ definitions:
       compression: 1.0
       cropping: false
       optimize: quality
+    /hippo:configuration/hippo:frontend/cms/ui-extensions/cloudinary:
+      jcr:primaryType: frontend:uiExtension
+      frontend:displayName: cloudinary
+      frontend:extensionPoint: document.field
+      frontend:initialHeightInPixels: 800
+      frontend:url: http://ubuntu-20/cms/
